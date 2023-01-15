@@ -1,0 +1,40 @@
+{
+  "name": "@contexer/base",
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "types": "./dist/index.d.ts"
+  },
+  "scripts": {
+    "dev": "run-p \"dev:*\"",
+    "dev:vite": "vite build --watch --emptyOutDir false",
+    "build:vite": "vite build",
+    "build:tsc": "tsc",
+    "build": "run-s \"build:vite\" \"build:tsc\""
+  },
+  "dependencies": {
+    "@contexer/common": "workspace:*",
+    "@contexer/logger": "workspace:*",
+    "@sindresorhus/is": "^5.3.0"
+  },
+  "devDependencies": {
+    "eslint": "8.30.0",
+    "eslint-config-custom": "workspace:*",
+    "npm-run-all": "^4.1.5",
+    "tsconfig": "workspace:*",
+    "typescript": "4.9.4",
+    "vite": "^4.0.1"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "contexer-sdk",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "shared/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "ci:publish": "changeset publish",
+    "ci:version": "changeset version && pnpm install",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "eslint . --ext ts",
+    "---------packages---------": "",
+    "base": "pnpm --filter \"base\"",
+    "common": "pnpm --filter \"common\"",
+    "-----------shared-----------": "",
+    "eslint": "pnpm --filter \"eslint-config-custom\"",
+    "logger": "pnpm --filter \"logger\""
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.7",
+    "@changesets/cli": "^2.25.2",
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.8.3",
+    "turbo": "^1.7.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.25.0"
+}

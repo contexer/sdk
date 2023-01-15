@@ -1,0 +1,19 @@
+{
+  "extends": "./base.json",
+  "include": [
+    "../../packages/**/*.ts",
+    "../../packages/**/*.tsx",
+    "../../shared/**/*.ts",
+    "../../shared/**/*.tsx"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/lib",
+    "**/gen-src",
+    "**/generated",
+    "**/.*"
+  ],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}
