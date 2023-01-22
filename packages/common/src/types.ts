@@ -1,5 +1,6 @@
 export interface ContexerDialogParams {
-  baseUrl: string
+  assetOrigin: string
+  apiOrigin: string
   publicKey: string
   className?: string
 }
@@ -10,6 +11,7 @@ export interface InitMessage {
     /** User public key */
     publicKey: string
     className: string | undefined
+    apiOrigin: string | undefined
   }
 }
 
