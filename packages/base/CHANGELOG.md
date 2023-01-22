@@ -1,5 +1,16 @@
 # @contexer/base
 
+## 0.2.0
+
+### Minor Changes
+
+- [#3](https://github.com/contexer/sdk/pull/3) [`5e016d5`](https://github.com/contexer/sdk/commit/5e016d528799e0849ec82672ea07e863f98d2187) Thanks [@nick-kang](https://github.com/nick-kang)! - update origin variable names
+
+### Patch Changes
+
+- Updated dependencies [[`5e016d5`](https://github.com/contexer/sdk/commit/5e016d528799e0849ec82672ea07e863f98d2187)]:
+  - @contexer/common@0.2.0
+
 ## 0.1.0
 
 ### Minor Changes
