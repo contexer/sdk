@@ -22,7 +22,7 @@ export class ContexerDialogClass {
     root.id = ELEMENT_ID
     document.body.appendChild(root)
 
-    const manifestUrl = new URL(MANIFEST_FILENAME, this.params.baseUrl)
+    const manifestUrl = new URL(MANIFEST_FILENAME, this.params.assetOrigin)
     const res = await fetch(manifestUrl)
 
     if (!res.ok) {
@@ -86,7 +86,7 @@ export class ContexerDialogClass {
     }
 
     const script = document.createElement('script')
-    script.src = new URL(scriptPath, this.params.baseUrl).href
+    script.src = new URL(scriptPath, this.params.assetOrigin).href
     script.async = true
     script.type = 'module'
     script.onload = (): void => {
@@ -95,6 +95,7 @@ export class ContexerDialogClass {
         data: {
           publicKey: this.params.publicKey,
           className: this.params.className,
+          apiOrigin: this.params.apiOrigin,
         },
       })
     }
@@ -110,7 +111,7 @@ export class ContexerDialogClass {
       }
       const link = document.createElement('link')
       link.rel = 'stylesheet'
-      link.href = new URL(cssPath, this.params.baseUrl).href
+      link.href = new URL(cssPath, this.params.assetOrigin).href
       document.head.appendChild(link)
     })
   }
