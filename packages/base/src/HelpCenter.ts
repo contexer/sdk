@@ -5,7 +5,7 @@ import {
   MANIFEST_FILENAME,
 } from '@contexer/common'
 import is from '@sindresorhus/is'
-import { logger } from '@contexer/logger'
+import { logger } from './logger'
 
 export class ContexerDialogClass {
   constructor(private readonly params: ContexerDialogParams) {
