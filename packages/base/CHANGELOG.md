@@ -1,5 +1,11 @@
 # @contexer/base
 
+## 0.2.1
+
+### Patch Changes
+
+- [#5](https://github.com/contexer/sdk/pull/5) [`2099d06`](https://github.com/contexer/sdk/commit/2099d06e6b690761749f255765846e5af942ca91) Thanks [@nick-kang](https://github.com/nick-kang)! - remove internal logger package
+
 ## 0.2.0
 
 ### Minor Changes
